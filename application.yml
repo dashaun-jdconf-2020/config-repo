@@ -1,0 +1,9 @@
+eureka:
+  client:
+    enabled: true
+
+spring:
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false

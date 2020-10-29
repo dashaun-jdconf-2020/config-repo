@@ -3,6 +3,14 @@ application:
   dumpMessage: the hits are viewable in the logs!
 
 spring:
+  spring:
+    jpa:
+      generate-ddl: true
+      hibernate:
+        ddl-auto: update
+        di
+  datasource:
+    driverClassName: cdata.cosmosdb.CosmosDBDriver
   data:
     redis:
       repositories:
