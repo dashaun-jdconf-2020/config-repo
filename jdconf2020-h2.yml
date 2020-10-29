@@ -1,3 +1,3 @@
 application:
-    message: this was configured via a config service instance and configuration repository!
+    defaultMessage: this was configured via a config service instance and configuration repository!
     dumpMessage: the hits are viewable in the logs!
