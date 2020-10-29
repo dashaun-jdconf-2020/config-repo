@@ -1,0 +1,3 @@
+application:
+  defaultMessage: this is using cosmosdbsql profile!
+  dumpMessage: the hits are viewable in the logs!

@@ -1,3 +1,12 @@
 application:
     defaultMessage: this was configured via a config service instance and configuration repository!
     dumpMessage: the hits are viewable in the logs!
+
+spring:
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:test;MODE=MySQL;DB_CLOSE_ON_EXIT=FALSE
+  autoconfigure:
+    exclude:
+      - com.microsoft.azure.spring.autoconfigure.cosmosdb.CosmosDbRepositoriesAutoConfiguration
+      - com.microsoft.azure.spring.autoconfigure.cosmosdb.CosmosAutoConfiguration
