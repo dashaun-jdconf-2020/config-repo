@@ -1,3 +1,18 @@
 application:
   defaultMessage: this is using cosmosdbsql profile!
   dumpMessage: the hits are viewable in the logs!
+
+spring:
+  data:
+    redis:
+      repositories:
+        enabled: false
+  autoconfigure:
+    include:
+      - com.microsoft.azure.spring.autoconfigure.cosmosdb.CosmosDbRepositoriesAutoConfiguration
+      - com.microsoft.azure.spring.autoconfigure.cosmosdb.CosmosAutoConfiguration
+    exclude:
+      - org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+      - org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration
+  session:
+    store-type: none
