@@ -1,17 +1,18 @@
 application:
-    defaultMessage: this was configured via a config service instance and configuration repository!
-    dumpMessage: the hits are viewable in the logs!
+  defaultMessage: this is using redis profile and sessions are enabled!
+  dumpMessage: the hits are viewable in the logs!
 
 spring:
   data:
     redis:
       repositories:
-        enabled: false
+        enabled: true
   autoconfigure:
     exclude:
       - com.microsoft.azure.spring.autoconfigure.cosmosdb.CosmosDbRepositoriesAutoConfiguration
       - com.microsoft.azure.spring.autoconfigure.cosmosdb.CosmosAutoConfiguration
+    include:
       - org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
       - org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration
   session:
-    store-type: none
+    store-type: redis
