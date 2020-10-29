@@ -8,9 +8,10 @@ spring:
       repositories:
         enabled: true
   autoconfigure:
-    include:
+    exclude:
       - com.microsoft.azure.spring.autoconfigure.cosmosdb.CosmosDbRepositoriesAutoConfiguration
       - com.microsoft.azure.spring.autoconfigure.cosmosdb.CosmosAutoConfiguration
+    include:
       - org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
       - org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration
   session:
