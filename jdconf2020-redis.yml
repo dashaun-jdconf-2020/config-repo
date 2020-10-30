@@ -7,5 +7,3 @@ spring:
     redis:
       repositories:
         enabled: true
-  session:
-    store-type: none
