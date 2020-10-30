@@ -2,8 +2,8 @@ application:
   defaultMessage: this is using redis profile and sessions are enabled!
   dumpMessage: the hits are viewable in the logs!
 
-spring:
-  data:
-    redis:
-      repositories:
-        enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
