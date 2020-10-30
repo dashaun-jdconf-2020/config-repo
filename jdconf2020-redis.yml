@@ -8,4 +8,4 @@ spring:
       repositories:
         enabled: true
   session:
-    store-type: redis
+    store-type: none
